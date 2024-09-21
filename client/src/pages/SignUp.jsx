@@ -29,7 +29,7 @@ export default function signup() {
       });
       const data = await res.json();
       if (data.success == false) {
-        return setErrorMessage(data.message);
+        setErrorMessage(data.message);
       }
       setLoading(false);
       if(res.ok){
@@ -80,7 +80,7 @@ export default function signup() {
               )
               : (
                 'Sign Up'
-                )};
+                )}
             </Button>
           </form>
           <div className="flex gap-2 text-sm mt-5">
